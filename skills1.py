@@ -31,7 +31,13 @@ def long_words(word_list):
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
-    return None
+    smallest_number = number_list[0]
+    smallest_index = 0
+    for index in range(len(number_list)):
+        if number_list[index] < smallest_number:
+            smallest_number = number_list[index]
+            smallest_index = index
+    return smallest_index
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
@@ -65,6 +71,7 @@ def main():
     print all_odd(number_list)
     print all_even(number_list)
     print long_words(word_list)
+    print smallest(number_list)
 
 if __name__ == '__main__':
     main()
