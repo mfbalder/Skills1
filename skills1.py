@@ -78,7 +78,10 @@ def mult_numbers(number_list):
 
 # Write a function that joins all the strings in a list together (without using the join method) and returns a single string.
 def join_strings(word_list):
-    return ""
+    single_string = ""
+    for word in word_list:
+        single_string = single_string + word
+    return single_string
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
@@ -94,6 +97,7 @@ def main():
     print word_lengths(word_list)
     print sum_numbers(number_list)
     print mult_numbers(number_list)
+    print join_strings(word_list)
 
 
 if __name__ == '__main__':
