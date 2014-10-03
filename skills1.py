@@ -85,7 +85,13 @@ def join_strings(word_list):
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
-    return 0
+    total = 0
+    count = 0
+    for number in number_list:
+        total = total + number
+        count = count + 1
+    return total / float(count)
+
 
 def main():
     print all_odd(number_list)
@@ -98,6 +104,7 @@ def main():
     print sum_numbers(number_list)
     print mult_numbers(number_list)
     print join_strings(word_list)
+    print average(number_list)
 
 
 if __name__ == '__main__':
