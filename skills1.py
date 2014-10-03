@@ -64,7 +64,10 @@ def word_lengths(word_list):
 
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
-    return 0
+    sum = 0
+    for number in number_list:
+        sum = sum + number
+    return sum
 
 # Write a function that multiplies all the numbers in a list together.
 def mult_numbers(number_list):
@@ -86,6 +89,7 @@ def main():
     print largest(number_list)
     print halvesies(number_list)
     print word_lengths(word_list)
+    print sum_numbers(number_list)
 
 
 if __name__ == '__main__':
