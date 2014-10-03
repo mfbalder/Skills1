@@ -31,12 +31,10 @@ def long_words(word_list):
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
-    smallest_number = number_list[0]
     smallest_index = 0
-    for index in range(len(number_list)):
-        if number_list[index] < smallest_number:
-            smallest_number = number_list[index]
-            smallest_index = index
+    for number_index in range(len(number_list)):
+        if number_list[number_index] < number_list[smallest_index]:
+            smallest_index = number_index
     return smallest_index
 
 # Write a function that finds the largest element in a list of integers and returns it.
