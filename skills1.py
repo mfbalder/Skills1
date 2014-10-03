@@ -71,7 +71,10 @@ def sum_numbers(number_list):
 
 # Write a function that multiplies all the numbers in a list together.
 def mult_numbers(number_list):
-    return 0
+    total = 1
+    for number in number_list:
+        total = total * number
+    return total
 
 # Write a function that joins all the strings in a list together (without using the join method) and returns a single string.
 def join_strings(word_list):
@@ -90,6 +93,7 @@ def main():
     print halvesies(number_list)
     print word_lengths(word_list)
     print sum_numbers(number_list)
+    print mult_numbers(number_list)
 
 
 if __name__ == '__main__':
