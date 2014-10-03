@@ -15,7 +15,11 @@ def all_odd(number_list):
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
-    return []
+    new_list = []
+    for number in number_list:
+        if number % 2 == 0:
+            new_list.append(number)
+    return new_list
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 def long_words(word_list):
@@ -55,6 +59,7 @@ def average(number_list):
 
 def main():
     print all_odd(number_list)
+    print all_even(number_list)
 
 if __name__ == '__main__':
     main()
