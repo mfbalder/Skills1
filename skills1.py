@@ -41,7 +41,12 @@ def smallest(number_list):
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
-    return None
+    largest_index = 0
+    for number_index in range(len(number_list)):
+        if number_list[number_index] > number_list[largest_index]:
+            largest_index = number_index
+    return largest_index
+
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
@@ -72,6 +77,7 @@ def main():
     print all_even(number_list)
     print long_words(word_list)
     print smallest(number_list)
+    print largest(number_list)
 
 if __name__ == '__main__':
     main()
