@@ -7,7 +7,13 @@ word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon"
 
 # Write a function that takes a list of numbers and returns a new list with only the odd numbers.
 def all_odd(number_list):
-    return filter(lambda x: x % 2 != 0, number_list)
+    ###### with list comprehension ######
+    return [x for x in number_list if x % 2 != 0]
+
+    #### with filter function ######
+    # return filter(lambda x: x % 2 != 0, number_list)
+
+    #### standard version ####
     # new_list = []
     # for num in number_list:
     #     if x % 2 != 0:
@@ -17,7 +23,13 @@ def all_odd(number_list):
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
-    return filter(lambda x: x % 2 == 0, number_list)
+    ###### with list comprehension ######
+    return [x for x in number_list if x % 2 == 0]
+
+    #### with filter function ######
+    # return filter(lambda x: x % 2 == 0, number_list)
+
+    #### standard version ####
     # new_list = []
     # for num in number_list:
     #     if x % 2 == 0:
@@ -71,6 +83,7 @@ def word_lengths(word_list):
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
     return reduce(lambda x, y: x + y, number_list)
+
     # sum = 0
     # for number in number_list:
     #     sum = sum + number
@@ -104,17 +117,17 @@ def average(number_list):
 
 
 def main():
-    print all_odd(number_list)
+    # print all_odd(number_list)
     print all_even(number_list)
-    print long_words(word_list)
-    print smallest(number_list)
-    print largest(number_list)
-    print halvesies(number_list)
-    print word_lengths(word_list)
-    print sum_numbers(number_list)
-    print mult_numbers(number_list)
-    print join_strings(word_list)
-    print average(number_list)
+    # print long_words(word_list)
+    # print smallest(number_list)
+    # print largest(number_list)
+    # print halvesies(number_list)
+    # print word_lengths(word_list)
+    # print sum_numbers(number_list)
+    # print mult_numbers(number_list)
+    # print join_strings(word_list)
+    # print average(number_list)
 
 
 if __name__ == '__main__':
