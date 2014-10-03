@@ -1,11 +1,17 @@
 # Things you should be able to do.
 
+# Start 11:15
+
 number_list = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
 word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "and", "spam"]
 
 # Write a function that takes a list of numbers and returns a new list with only the odd numbers.
 def all_odd(number_list):
-    return []
+    new_list = []
+    for num in number_list:
+        if num % 2 != 0:
+            new_list.append(num)
+    return new_list
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
@@ -46,3 +52,9 @@ def join_strings(word_list):
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
     return 0
+
+def main():
+    print all_odd(number_list)
+
+if __name__ == '__main__':
+    main()
