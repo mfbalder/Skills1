@@ -149,6 +149,37 @@ def average(number_list):
     #     count = count + 1
     # return total / float(count)
 
+def custom_map(function, iterable):
+    """Applies a function to every item of the iterable list, and returns a list of the results"""
+    new_list = []
+    for item in iterable:
+        new_list.append(function(item))
+    return new_list
+
+def custom_filter(function, iterable):
+    """Constructs a list of the elements in iterable for which the function returns true"""
+    new_list = []
+    for item in iterable:
+        if function(item) == True:
+            new_list.append(item)
+    return new_list
+
+def custom_reduce(function, iterable, initializer=None):
+    """Applies function of two arguments cumulatively to the items of iterable, from left to right, to 
+    reduce the iterable to a single value"""
+    if initializer == None:
+        counter = iterable[0]
+        for item in iterable[1:]:
+            counter = function(counter, item)
+    else:
+        counter = initializer
+        for item in iterable:
+            counter = function(counter, item)
+    return counter
+
+    
+
+
 
 def main():
     # print all_odd(number_list)
@@ -157,11 +188,15 @@ def main():
     # print smallest(number_list)
     # print largest(number_list)
     # print halvesies(number_list)
-    print word_lengths(word_list)
+    # print word_lengths(word_list)
     # print sum_numbers(number_list)
     # print mult_numbers(number_list)
     # print join_strings(word_list)
     # print average(number_list)
+
+    print custom_map(lambda x: x * 2, number_list)
+    print custom_filter(lambda x: x % 2 == 0, number_list)
+    print custom_reduce(lambda x, y: x + y, number_list)
 
 
 if __name__ == '__main__':
