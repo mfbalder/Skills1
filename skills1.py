@@ -57,7 +57,10 @@ def halvesies(number_list):
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    return []
+    new_list = []
+    for word in word_list:
+        new_list.append(len(word))
+    return new_list
 
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
@@ -82,6 +85,7 @@ def main():
     print smallest(number_list)
     print largest(number_list)
     print halvesies(number_list)
+    print word_lengths(word_list)
 
 
 if __name__ == '__main__':
