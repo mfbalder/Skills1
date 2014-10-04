@@ -1,6 +1,7 @@
 # Things you should be able to do.
 
-# Start 11:15
+# Start 11:15 End 11:50
+# Total Time: 35 minutes
 
 number_list = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
 word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "and", "spam"]
@@ -92,7 +93,7 @@ def halvesies(number_list):
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    return[len(x) for x in word_list if len(x) >= 4]
+    return[len(x) for x in word_list]
 
     #### with functional programming ######
     # return map(lambda x: len(x), word_list)
@@ -139,7 +140,7 @@ def join_strings(word_list):
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
     #### with functional programming ######
-    return reduce(lambda x, y: x + y, number_list) / len(number_list)
+    return reduce(lambda x, y: x + y, number_list) / float(len(number_list))
 
     #### with iteration ####
     # total = 0
@@ -194,9 +195,9 @@ def main():
     # print join_strings(word_list)
     # print average(number_list)
 
-    print custom_map(lambda x: x * 2, number_list)
-    print custom_filter(lambda x: x % 2 == 0, number_list)
-    print custom_reduce(lambda x, y: x + y, number_list)
+    # print custom_map(lambda x: x * 2, number_list)
+    # print custom_filter(lambda x: x % 2 == 0, number_list)
+    # print custom_reduce(lambda x, y: x + y, number_list)
 
 
 if __name__ == '__main__':
